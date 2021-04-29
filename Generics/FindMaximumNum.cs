@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 namespace Generics
 {
     public class FindMaximumNum // class
-    {
+    {/*UC1:- Given 3 Integers find the maximum - Ensure to test code with the Test Case. 
+            - To ensure your Code works you need 3 test cases with Max Number at 1st, 2ndand 3rd.
+            - Use Integer Object and compareTo method to test the maximum number.
+        */
         public int FindMaxInteger(int num1, int num2, int num3) //method
         {
             var MaxResult = (num1.CompareTo(num2) > 0 ? num1 : (num2.CompareTo(num3) > 0 ? num2 : num3));
