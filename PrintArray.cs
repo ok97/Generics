@@ -10,21 +10,23 @@ namespace Generics
     { /* UC1:- Given an array of Integer, Double and Character, write a program to print the same.
                - Create PrintArray class and define toPrint method to print corresponding elements to console.
        */
-        public static void ToPrintInteger(int [] arr) // create ToPrintInteger Method
+        public static void ToPrintInteger(int[] arr) // create ToPrintInteger Method
         {
             Console.Write("Display Integer Array :- ");
             foreach (var element in arr) //
             {
                 Console.Write(element + " "); // Print item in int array
             }
-        } public static void ToPrintdouble(double[] arr) //create ToPrintdouble Method
+        }
+        public static void ToPrintdouble(double[] arr) //create ToPrintdouble Method
         {
             Console.Write("\nDisplay Double Array:- ");
             foreach (var element in arr)//
             {
                 Console.Write(element + " "); //Print item in double array
             }
-        } public static void ToPrintCharachter(char[] arr) //create ToPrintCharachter Method
+        }
+        public static void ToPrintCharachter(char[] arr) //create ToPrintCharachter Method
         {
             Console.Write("\nDisplay Character Array:- "); //print item in array
             foreach (var element in arr) //
@@ -32,7 +34,15 @@ namespace Generics
                 Console.Write(element + " "); //print item in char array
             }
         }
-       
+        public static void ToPrintArray<T>(T[]array)
+        {
+            Console.Write("\nDisplay Array Element:- ");
+            foreach (T elements in array)
+            {
+                Console.Write(elements+" ");
+            }
         }
+
     }
 }
+
