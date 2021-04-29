@@ -46,15 +46,29 @@ namespace Generics
             return MaxResult;
         }
 
+        /* UC3:- Given 3 Strings find the maximum. 
+                 - Ensure to test code with the Test Case and repeat with the similar 3 Test cases in. 
+                 - E.g. Apple Peach Banana.
+        */
+
+        public string FindMaxString(string str1, string str2, string str3) //method
+        {
+            string MaxResult = (str1.CompareTo(str2) > 0 ? str1 : (str2.CompareTo(str3) > 0 ? str2 : str3));
+            Console.WriteLine($"Maximum String Number is :- {MaxResult}");
+            return MaxResult;
+        }
+
         public static void Main(string[] args) //Main method
         {
             FindMaximumNum FindMaxInt = new FindMaximumNum();
 
             //Console.WriteLine(FindMaxInt.FindMaxInteger(10, 20, 30)); //calling method and passing parameter
 
-            FindMaxInt.FindMaxInteger(10, 20, 150);//calling method and passing parameter //CallUC1
+            FindMaxInt.FindMaxInteger(10, 20, 150);//calling method and passing parameter //Call UC1
           
-            FindMaxInt.FindMaxFloat(50.4, 890.2, 159.89);//calling method and passing parameter //CallUC2
+            FindMaxInt.FindMaxFloat(50.4, 890.2, 159.89);//calling method and passing parameter //Call UC2
+            
+            FindMaxInt.FindMaxString("Apple", "Peach", "Banana");//calling method and passing parameter //Call UC3
 
 
             Console.ReadLine();

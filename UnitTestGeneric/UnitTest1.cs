@@ -100,5 +100,51 @@ namespace UnitTestGeneric
         }
 
 
+        /* TC3.1:- Given Max String Number at 1st Position return the Same Number. 
+                - Ensure the test data has Max Number in the First position. 
+      */
+        [TestMethod]
+        [DataRow("Peach", "Apple", "Banana", "Peach")]
+
+        public void FindMaxStringNumberat1stPosition(string str1, string str2, string str3, string expected)
+        {
+            FindMaximumNum maxOfString = new FindMaximumNum();
+
+            string actual = maxOfString.FindMaxString(str1, str2, str3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        /* TC3.2:- Given Max String Number at 2nd Position return the Same Number. 
+                - Ensure the test data has Max Number in the First position. 
+      */
+        [TestMethod]
+        [DataRow("Apple", "Peach", "Banana", "Peach")]
+
+        public void FindMaxStringNumberat2ndPosition(string str1, string str2, string str3, string expected)
+        {
+            FindMaximumNum maxOfString = new FindMaximumNum();
+
+            string actual = maxOfString.FindMaxString(str1, str2, str3);
+
+            Assert.AreEqual(expected, actual);
+        }
+        /* TC3.3:- Given Max String Number at 3rd Position return the Same Number. 
+               - Ensure the test data has Max Number in the First position. 
+     */
+        [TestMethod]
+        [DataRow("Apple", "Banana", "Peach", "Peach")]
+
+        public void FindMaxStringNumberat3rdPosition(string str1, string str2, string str3, string expected)
+        {
+            FindMaximumNum maxOfString = new FindMaximumNum();
+
+            string actual = maxOfString.FindMaxString(str1, str2, str3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
     }
 }
