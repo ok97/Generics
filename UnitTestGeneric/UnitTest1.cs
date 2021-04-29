@@ -51,6 +51,54 @@ namespace UnitTestGeneric
             Assert.AreEqual(expected, actual);
         }
 
+        /* TC2.1:- Given Max Number at 1st Position return the Same Number. 
+                - Ensure the test data has Max Number in the First position. 
+      */
+        [TestMethod]
+        [DataRow(55.25, 3.3, 10.5, 55.25)]
+
+        public void FindMaxFloatNumberat1stPosition(double num1, double num2, double num3, double expected)
+        {
+            FindMaximumNum maxOffloat = new FindMaximumNum();
+
+            double actual = maxOffloat.FindMaxFloat(num1, num2, num3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        /* TC2.2:- Given Max Number at 2nd Position return the Same Number. 
+                - Ensure the test data has Max Number in the First position. 
+      */
+        [TestMethod]
+        [DataRow( 3.3, 55.25, 10.5, 55.25)]
+
+        public void FindMaxFloatNumberat2stPosition(double num1, double num2, double num3, double expected)
+        {
+            FindMaximumNum maxOffloat = new FindMaximumNum();
+
+            double actual = maxOffloat.FindMaxFloat(num1, num2, num3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
+
+        /* TC2.3:- Given Max Number at 3rd Position return the Same Number. 
+                - Ensure the test data has Max Number in the First position. 
+      */
+        [TestMethod]
+        [DataRow(3.3,  10.5, 55.25, 55.25)]
+
+        public void FindMaxFloatNumberat3rdPosition(double num1, double num2, double num3, double expected)
+        {
+            FindMaximumNum maxOffloat = new FindMaximumNum();
+
+            double actual = maxOffloat.FindMaxFloat(num1, num2, num3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
