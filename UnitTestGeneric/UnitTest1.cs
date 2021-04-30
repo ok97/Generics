@@ -12,13 +12,13 @@ namespace UnitTestGeneric
         [TestMethod]
         [DataRow(55, 3, 5, 55)]
         
-        public void FindMaxNumberat1stPosition(int num1, int num2, int num3, int expected)
+        public void FindMaxNumberat1stPosition(int num1, int num2, int num3, int expected) //get parametes
         {
-            FindMaximumNum maxOfIntegers = new FindMaximumNum();
+            FindMaximumNum maxOfIntegers = new FindMaximumNum(); //create object of the class
 
-            int actual = maxOfIntegers.FindMaxInteger(num1, num2, num3);
+            int actual = maxOfIntegers.FindMaxInteger(num1, num2, num3); //call method
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); // compare 
         }
 
         /* TC1.2:- Given Max Number at 2nd Position return the Same Number.
@@ -191,6 +191,31 @@ namespace UnitTestGeneric
         }
 
 
+        /* TC5:- Given Max String Number at return the Same Number. 
+               - Ensure the test data has Max Number in the Array. 
+     */
+        [TestMethod]
+        public void FindMaxAllatPositionmorethanthreeparameter()
+        {
+            int[] intArr = { 99, 10, 20, 30, 5 }; //integer array
+            int iexpected = 99; //asigin expected value
+            Takemorethenthreeparameters<int> maxOfIntegers = new Takemorethenthreeparameters<int>(intArr); //create object and passing array
+            int iactual = maxOfIntegers.GetMaxUsingSort(); //actual call Get Max Using Sort method using Takemorethenthreeparameters generic class
+
+            Assert.AreEqual(iexpected, iactual);
+            double[] DoubleArr = { 10.1, 99.50, 20.100, 30.25, 5.8 }; //double array
+            double dexpected = 99.50; //asigin expected value
+            Takemorethenthreeparameters<double> maxOfdouble= new Takemorethenthreeparameters<double>(DoubleArr); //create object and passing array
+            double dactual = maxOfdouble.GetMaxUsingSort(); //actual call Get Max Using Sort method using Takemorethenthreeparameters generic class
+
+            Assert.AreEqual(dexpected, dactual);
+            string[] stringArr = { "Apple", "Peach", "Banana", "Omprakash" }; //String array
+            string sexpected = "Peach"; //asigin expected value
+            Takemorethenthreeparameters<string> maxOfstring = new Takemorethenthreeparameters<string>(stringArr); //create object and passing array
+            string sactual = maxOfstring.GetMaxUsingSort(); //actual call Get Max Using Sort method using Takemorethenthreeparameters generic class
+
+            Assert.AreEqual(sexpected, sactual);
+        }
 
 
     }

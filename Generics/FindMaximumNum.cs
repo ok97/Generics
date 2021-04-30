@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Generics
 {
     public class FindMaximumNum // class
@@ -75,10 +76,18 @@ namespace Generics
         {
             Array.Sort(array); //Array.Sort() method is used to sort an array Asc.
             var maximum = this.array[this.array.Length - 1]; //
-            Console.WriteLine($"Maximun Number is:- {maximum}"); //print maximum number
+            //Console.WriteLine($"Maximun Number is:- {maximum}"); //print maximum number
+            printMax(maximum); //pas maximum value printMax method
             return maximum;
         }
-        
+        /* UC5:- Extend the max method to also print the max to std out using Generic Method 
+                 - Write printMax Generic Method which is internally called from testMaximum.
+        */
+        static void printMax(T maximum) //create printMax method
+        {
+            Console.WriteLine($"Maximum Number is:- {maximum}"); //print maximum value
+        }
+
     }
     public class Run
     {
