@@ -34,6 +34,11 @@ namespace Generics
                 Console.Write(element + " "); //print item in char array
             }
         }
+        
+         /* UC2:- Given an array of Integer, Double and Character, write a program to print the same using Generics.
+            */
+        
+        
         public static void ToPrintArray<T>(T[]array)
         {
             Console.Write("\nDisplay Array Element:- ");
