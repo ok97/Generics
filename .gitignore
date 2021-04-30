@@ -169,6 +169,8 @@ DocProject/Help/html
 publish/
 packages/
 TestResults/
+Generics/
+UnitTestGeneric/
 
 # Publish Web Output
 *.[Pp]ublish.xml

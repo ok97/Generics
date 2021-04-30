@@ -57,23 +57,64 @@ namespace Generics
             Console.WriteLine($"Maximum String Number is :- {MaxResult}");
             return MaxResult;
         }
-
-        //public static void Main(string[] args) //Main method
-        //{
-        //    FindMaximumNum FindMaxInt = new FindMaximumNum();
-
-        //    //Console.WriteLine(FindMaxInt.FindMaxInteger(10, 20, 30)); //calling method and passing parameter
-
-        //    FindMaxInt.FindMaxInteger(10, 20, 150);//calling method and passing parameter //Call UC1
-
-        //    FindMaxInt.FindMaxFloat(50.4, 890.2, 159.89);//calling method and passing parameter //Call UC2
-
-        //    FindMaxInt.FindMaxString("Apple", "Peach", "Banana");//calling method and passing parameter //Call UC3
-
-
-        //    Console.ReadLine();
-
-
-        //}
+       
     }
+
+
+    /* UC4:- Extend the max method to take more then three parameters. 
+             - Use Options and use Sorting
+    */
+    public class Takemorethenthreeparameters<T> where T:IComparable //class
+    {
+        T[] array;
+        public Takemorethenthreeparameters(T[] array) //constructor
+        {
+            this.array = array;
+        }
+        public T GetMaxUsingSort() //Create GetMaxUsingSort method
+        {
+            Array.Sort(array); //Array.Sort() method is used to sort an array Asc.
+            var maximum = this.array[this.array.Length - 1]; //
+            Console.WriteLine($"Maximun Number is:- {maximum}"); //print maximum number
+            return maximum;
+        }
+        
+    }
+    public class Run
+    {
+        public static void Main(string[] args) //Main method
+        {
+            FindMaximumNum FindMaxInt = new FindMaximumNum();
+
+            // Console.WriteLine(FindMaxInt.FindMaxInteger(10, 20, 30)); //calling method and passing parameter
+
+           // FindMaxInt.FindMaxInteger(10, 20, 150);//calling method and passing parameter //Call UC1
+
+           // FindMaxInt.FindMaxFloat(50.4, 890.2, 159.89);//calling method and passing parameter //Call UC2
+
+            //FindMaxInt.FindMaxString("Apple", "Peach", "Banana");//calling method and passing parameter //Call UC3
+
+
+            /* UC4:- Extend the max method to take more then three parameters. 
+                     - Use Options and use Sorting
+            */
+
+            int[] intArr = { 10, 20, 30 ,99};
+            double[] doubleArr = { 10.15, 80.89, 30.69, 87.58 };
+            string[] stringArr = { "Apple", "Peach", "Banana","Omprakash" };
+
+            new Takemorethenthreeparameters<int>(intArr).GetMaxUsingSort(); //Calling Generic method integer array
+            new Takemorethenthreeparameters<double>(doubleArr).GetMaxUsingSort(); //Calling Generic method double array
+            new Takemorethenthreeparameters<string>(stringArr).GetMaxUsingSort(); //Calling Generic method string array
+
+
+            Console.ReadLine();
+
+
+        }
+    }
+
+
+
+
 }
